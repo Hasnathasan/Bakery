@@ -1,5 +1,4 @@
-
-import ScrapingForm from './ScrapingForm';
+import ScrapingForm from "./ScrapingForm";
 
 function API() {
   return (
