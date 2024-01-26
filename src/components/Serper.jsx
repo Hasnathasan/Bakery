@@ -1,39 +1,35 @@
 import { useState } from "react";
 
 const Serper = () => {
-  const [domain, setDomain] = useState('');
-  const [country, setCountry] = useState('');
-  const [keyword, setKeyword] = useState('');
-  console.log(keyword, country, domain)
-  
+  const [domain, setDomain] = useState("");
+  const [country, setCountry] = useState("");
+  const [keyword, setKeyword] = useState("");
+  console.log(keyword, country, domain);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     var myHeaders = new Headers();
-myHeaders.append("X-API-KEY", "f6111cb61d4828964b813b078afc2b656ffd0ad9");
-myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("X-API-KEY", "f6111cb61d4828964b813b078afc2b656ffd0ad9");
+    myHeaders.append("Content-Type", "application/json");
 
-var raw = JSON.stringify({
-  "q": domain,
-  "gl": country,
-  "k": keyword
-  
+    var raw = JSON.stringify({
+      q: domain,
+      gl: country,
+      k: keyword,
+    });
 
-});
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
 
-var requestOptions = {
-  method: 'POST',
-  headers: myHeaders,
-  body: raw,
-  redirect: 'follow'
-};
-
-fetch("https://google.serper.dev/search", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
-
- 
+    fetch("https://google.serper.dev/search", requestOptions)
+      .then((response) => response.text())
+      .then((result) => console.log(result))
+      .catch((error) => console.log("error", error));
   };
 
   return (
@@ -74,25 +70,22 @@ fetch("https://google.serper.dev/search", requestOptions)
 
 export default Serper;
 
-
-
-
 var myHeaders = new Headers();
 myHeaders.append("X-API-KEY", "f6111cb61d4828964b813b078afc2b656ffd0ad9");
 myHeaders.append("Content-Type", "application/json");
 
 var raw = JSON.stringify({
-  "q": "apple inc"
+  q: "apple inc",
 });
 
 var requestOptions = {
-  method: 'POST',
+  method: "POST",
   headers: myHeaders,
   body: raw,
-  redirect: 'follow'
+  redirect: "follow",
 };
 
 fetch("https://google.serper.dev/search", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
