@@ -5,30 +5,24 @@ import Extraone from "../../components/Extra/Extraone";
 import Extratwo from "../../components/Extra/Extratwo";
 import API from "../../components/API";
 
-
-
 const Home = () => {
-          
-    return (
-        <div>
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>SL Bakery | Home </title>
-                <link rel="canonical" href="http://mysite.com/example" />
-            </Helmet>
-        
+  return (
+    <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>SL Bakery | Home </title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
+
       {/* <Banner></Banner>  */}
       <div>
         <API></API>
       </div>
-       <Extraone></Extraone>
+      <Extraone></Extraone>
       <TopSection></TopSection>
       <Extratwo></Extratwo>
-    
-      
-
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Home;
