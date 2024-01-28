@@ -13,7 +13,7 @@ const Extratwo = () => {
           Big Momment Lil Pastry
         </p>
         <p className="my-5">
-          Cake's are not just a desert they are a little slice of happiness. To
+          Cake&apos;s are not just a desert they are a little slice of happiness. To
           make your special more enjoyable we <br />
           are here with freshly baked products.
         </p>
@@ -35,7 +35,7 @@ const Extratwo = () => {
           alt="pic of breads"
         />
         <p className="my-5">
-          Cake's are not just a desert they are a little slice of happiness. To
+          Cake&apos;s are not just a desert they are a little slice of happiness. To
           make your special more enjoyable we <br />
           are here with freshly baked products.
         </p>

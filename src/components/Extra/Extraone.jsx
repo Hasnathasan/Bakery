@@ -23,7 +23,7 @@ const Extraone = () => {
 
           <p className="mt-5 mb-3 font-bold text-2xl">FRESH PRODUCTS</p>
           <p>
-            Our baker's try to cook cleanly and we buy fresh items for baking.
+            Our baker&apos;s try to cook cleanly and we buy fresh items for baking.
             We make quality products.
           </p>
         </div>
